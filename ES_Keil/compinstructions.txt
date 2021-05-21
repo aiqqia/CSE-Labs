@@ -1,0 +1,6 @@
+BHI >
+BHS >= BCS
+BLO < BCC
+BLS <= 
+BEQ =
+BNE !=

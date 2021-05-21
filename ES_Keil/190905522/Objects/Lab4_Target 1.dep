@@ -1,0 +1,3 @@
+Dependencies for Project 'Lab4', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\l4q4.s)(0x60A69754)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 534" -Wa,armasm,--pd,"LPC175x_6x SETA 1"-o ./objects/l4q4.o)
