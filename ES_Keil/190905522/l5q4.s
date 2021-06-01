@@ -1,0 +1,64 @@
+	AREA RESET, CODE, READONLY
+	EXPORT __Vectors
+__Vectors
+	DCD 0x10001000
+	DCD Reset_Handler
+	
+	AREA myCode, CODE, READONLY
+	ENTRY
+	EXPORT Reset_Handler
+Reset_Handler
+	MOV R1, #6
+	MOV R2, #10
+	MOV R3, #7
+	MOV R4, #1
+	MOV R5, #5
+	MOV R6, #8
+	MOV R7, #9
+	MOV R8, #3
+	MOV R9, #2
+	MOV R10, #4
+	STMEA R13!, {R1-R10}
+	BL Srt;Sort Call
+	LDMEA R13!, {R1-R10}
+STOP B STOP
+
+Srt	MOV R2, #0 ;I
+	MOV R3, #0 ;J
+Top	CMP R2, #36
+	BEQ Sto
+	SUB R8, R13, R2
+	SUB R8, #4
+	LDR R4, [R8]
+	MOV R7, R2
+	MOV R3, R2
+	ADD R3, #4
+UP	CMP R3, #40
+	BEQ Hel
+	SUB R8, R13, R3
+	SUB R8, #4
+	LDR R5, [R8]
+	CMP R4, R5
+	BCS Leh
+	SUB R8, R13, R3
+	SUB R8, #4
+	LDR R4, [R8]
+	MOV R7, R3
+Leh	ADD R3, #4
+	B UP
+Hel	SUB R8, R13, R7
+	SUB R8, #4
+	LDR R4, [R8]
+	SUB R8, R13, R2
+	SUB R8, #4
+	LDR R5, [R8]
+	SUB R8, R13, R7
+	SUB R8, #4
+	STR R5, [R8]
+	SUB R8, R13, R2
+	SUB R8, #4
+	STR R4, [R8]
+	ADD R2, #4
+	B Top
+Sto	BX LR
+	END
