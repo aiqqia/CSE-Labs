@@ -1,83 +1,69 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void merge(int *arr, int start, int end, int mid, int *opcount)
+int opcount = 0;
+
+void merge(int *arr, int start, int end, int mid)
 {
-	int anum = mid - start + 1;
-	int bnum = end - mid;
-	int a[anum], b[bnum];
-	for (int i = 0; i < anum; i++)
-	{
+	int an = mid - start + 1;
+	int bn = end - mid;
+	int a[an], b[bn];
+	for (int i = 0; i < an; i++){
 		a[i] = arr[i + start];
 	}
-	for (int i = 0; i < bnum; i++)
-	{
+	for (int i = 0; i < bn; i++){
 		b[i] = arr[i + mid + 1];
 	}
 	int i = 0, j = 0, k = start;
-	while (i < anum && j < bnum)
-	{
-		(*opcount)++;
-		if (a[i] < b[j])
-		{
+	while (i < an && j < bn){
+		opcount++;
+		if (a[i] < b[j]){
 			arr[k] = a[i];
 			i++;
 		}
-		else
-		{
+		else{
 			arr[k] = b[j];
 			j++;
 		}
 		k++;
 	}
-	while (i < anum)
-	{
+	while (i < an){
+        opcount++;
 		arr[k] = a[i];
 		i++;
 		k++;
 	}
-	while (j < bnum)
-	{
+	while (j < bn){
+        opcount++;
 		arr[k] = b[j];
 		j++;
 		k++;
 	}
 }
-void mergeSort(int *arr, int start, int end, int *opcount)
-{
-	if (start < end)
-	{
+void mergesort(int *arr, int start, int end){
+	if (start < end){
 		int mid = start + (end - start) / 2;
-		mergeSort(arr, start, mid, opcount);
-		mergeSort(arr, mid + 1, end, opcount);
-		merge(arr, start, end, mid, opcount);
+		mergesort(arr, start, mid);
+		mergesort(arr, mid + 1, end);
+		merge(arr, start, end, mid);
 	}
 }
 
-int main()
-{
-	printf("Enter the number of elements in the array : ");
-	int num;
-	scanf("%d", &num);
+int main(){
+	printf("Enter number of elements : ");
+	int n;
+	scanf("%d", &n);
 	printf("Enter the array : ");
-	int *arr = (int *)calloc(num, sizeof(int));
-	for (int i = 0; i < num; i++)
-	{
+	int *arr = (int *)calloc(n, sizeof(int));
+	for (int i = 0; i < n; i++){
 		scanf("%d", &arr[i]);
-	}
-	printf("Your array is : ");
-	for (int i = 0; i < num; i++)
-	{
-		printf("%d ", arr[i]);
-	}
+    }
 	printf("\n");
-	int opcount = 0;
-	mergeSort(arr, 0, num - 1, &opcount);
-	printf("Your sorted array is : ");
-	for (int i = 0; i < num; i++)
-	{
+	mergesort(arr, 0, n - 1);
+	printf("The Sorted Array is : ");
+	for (int i = 0; i < n; i++){
 		printf("%d ", arr[i]);
 	}
-	printf("\nThe number of operations are : %d\n", opcount);
+	printf("\nThe Opcount is : %d\n",opcount);
 	return 0;
 }
