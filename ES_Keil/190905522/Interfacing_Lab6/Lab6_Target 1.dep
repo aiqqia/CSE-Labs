@@ -7,7 +7,7 @@ I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\l6q1.c)(0x60BA4C80)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\l6q1.o --omf_browse .\l6q1.crf --depend .\l6q1.d)
+F (.\l6q2.c)(0x60BB2AE7)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\l6q2.o --omf_browse .\l6q2.crf --depend .\l6q2.d)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
