@@ -26,6 +26,22 @@ NODE insert(NODE root,int x){
     return(root);
 }
 
+void postorder(NODE cur){
+    if(cur){
+        postorder(cur->left);
+        postorder(cur->right);
+        printf("%4d",cur->val);
+    }
+}
+
+void preorder(NODE cur){
+    if(cur){
+        printf("%4d",cur->val);
+        preorder(cur->left);
+        preorder(cur->right);
+    }
+}
+
 void inorder(NODE cur){
     if(cur){
         inorder(cur->left);
@@ -55,7 +71,7 @@ int main(){
     NODE root = NULL;
     int ch,x;
     do{
-        printf("\n1.Enter element(no duplicates)  2. Print inorder  3. Show balance factor  4.Exit    Enter choice : ");
+        printf("\n1.Enter element(no duplicates)  2. Print elements  3. Show balance factor  4.Exit    Enter choice : ");
         scanf("%d",&ch);
         switch (ch){
             case 1 : printf("Enter element : ");
@@ -64,6 +80,10 @@ int main(){
                      break;
             case 2 : printf("\nInorder traversal is : ");
                      inorder(root);
+                     printf("\nPreorder traversal is : ");
+                     preorder(root);
+                     printf("\nPostorder traversal is : ");
+                     postorder(root);
                      break;
             case 3 : balancefactor(root);
                      break;
