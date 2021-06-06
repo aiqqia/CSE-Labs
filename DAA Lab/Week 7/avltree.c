@@ -87,6 +87,7 @@ NODE insert(NODE new, int k){
         new->left = lRotate(new->left);
         return rRotate(new);
     }
+    
     if (bal<-1 && k < new->right->val){//RightLeftCase
         new->right = rRotate(new->right);
         return lRotate(new);

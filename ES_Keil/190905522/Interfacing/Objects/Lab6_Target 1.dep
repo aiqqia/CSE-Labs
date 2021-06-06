@@ -1,37 +1,0 @@
-Dependencies for Project 'Lab6', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 6160000::V6.16::ARMCLANG
-F (.\l6q1.c)(0x60B9F511)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/Users/HP/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-I./RTE/_Target_1-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/Device/Include-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/l6q1.o -MD)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\LPC17xx.h)(0x5849004A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EF44A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035C7D0)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8329EA)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EF44A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5EE1587A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6035C7CC)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\system_LPC17xx.h)(0x5849004A)
-F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x5849004A)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/Device/Include-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/RTE_Driver-Wa,armasm,--pd,"__UVISION_VERSION SETA 534" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"LPC175x_6x SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_lpc17xx.o)
-F (RTE\Device\LPC1768\system_LPC17xx.c)(0x60B9EF22)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/Users/HP/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-I./RTE/_Target_1-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/Device/Include-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/system_lpc17xx.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035C7D0)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\LPC17xx.h)(0x5849004A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8329EA)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EF44A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5EE1587A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6035C7CC)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\system_LPC17xx.h)(0x5849004A)
-F (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\RTE_Driver\GPIO_LPC17xx.c)(0x5D5BA482)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/Users/HP/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-I./RTE/_Target_1-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/Device/Include-IC:/Users/HP/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.6.0/RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/gpio_lpc17xx.o -MD)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\RTE_Driver\GPIO_LPC17xx.h)(0x5D5BA482)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\LPC17xx.h)(0x5849004A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EF44A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035C7D0)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8329EA)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EF44A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5EE1587A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6035C7CC)
-I (C:\Users\HP\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8EF44A)
-I (C:\Users\HP\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.6.0\Device\Include\system_LPC17xx.h)(0x5849004A)

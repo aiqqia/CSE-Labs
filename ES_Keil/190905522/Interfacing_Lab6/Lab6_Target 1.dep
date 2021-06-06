@@ -1,16 +1,0 @@
-Dependencies for Project 'Lab6', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC17xx.s)(0x532C1658)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (C:\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c)(0x60BA44C0)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\l6q3.c)(0x60BBA14F)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\l6q3.o --omf_browse .\l6q3.crf --depend .\l6q3.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
