@@ -46,7 +46,7 @@ void balancefactor(NODE cur){
     if(cur){
         balancefactor(cur->left);
         x = height(cur->left)-height(cur->right);
-        printf("\nNode %d has a balance factor of %d",cur->val,x);
+        printf("\nNode with value %d has a balance factor of %d",cur->val,x);
         balancefactor(cur->right);
     }
 }
