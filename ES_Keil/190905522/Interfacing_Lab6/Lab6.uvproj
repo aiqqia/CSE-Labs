@@ -411,14 +411,14 @@
               <FilePath>.\startup_LPC17xx.s</FilePath>
             </File>
             <File>
-              <FileName>solvedexample.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\solvedexample.c</FilePath>
-            </File>
-            <File>
               <FileName>system_LPC17xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>C:\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>l6q3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\l6q3.c</FilePath>
             </File>
           </Files>
         </Group>
