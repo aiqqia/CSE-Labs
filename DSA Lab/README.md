@@ -1,5 +1,5 @@
-# DBS-Questions
+# DSA-Questions
 
-My solutions to Data Base Systems questions.  
+My solutions to Data Structures and Applications questions.  
 4th Sem.  
-The queries have been executed in Oracle Database.
+The data structures have been implemented in C Language.
