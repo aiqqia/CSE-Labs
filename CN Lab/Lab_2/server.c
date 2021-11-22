@@ -65,7 +65,8 @@ int main()
             //Sort
 
             n = write(data_socket, (void *)&sent, sizeof(sent));
-            close(data_socket);
+            getchar();
         }
+        close(data_socket);
     }
 }
