@@ -7,26 +7,27 @@ void* threadcodeavg(void** args){
 	int** arr = (int**)args;
 	int l = 3;
 	int m = (l+1)/2;
-	int avg;
+	int *avg = (int*)malloc(sizeof(int));
 	int sum;
 	sum=0;
 	for(int i=0;i<l;i++){
 		sum += arr[m-1][i];
 	}
-	avg = sum/l;
+	*avg = sum/l;
 	return (void*)avg;
 }
 
 void* threadcodelar(void** args){
 	int** arr = (int**)args;
-	int l = 3;
-	int m = (l+1)/2;
+	int *l = (int*)malloc(sizeof(int));
+	*l = 3;
+	int m = (*l+1)/2;
 	m-=1;
-	int lar;
-	lar = 0;
-	for(int i=0;i<l;i++){
-		if(lar < arr[i][m])
-			lar = arr[i][m];
+	int *lar = (int*)malloc(sizeof(int));
+	*lar = 0;
+	for(int i=0;i<*l;i++){
+		if(*lar < arr[i][m])
+			*lar = arr[i][m];
 	}
 	return (void*)lar;
 }
@@ -50,13 +51,13 @@ int main()
 			scanf("%d",&arr[i][j]);
 		}
 	}
-	int ar[9] = {1,2,3,4,5,6,7,8,9};
-	int resAvg, resLar;
+	printf("\nHello!");
+	int *resAvg, *resLar;
 	pthread_t thread1, thread2;
 	pthread_create(&thread1,0,&threadcodeavg,(void**)arr);
 	pthread_create(&thread2,0,&threadcodelar,(void**)arr);
 	pthread_join(thread1,(void**)&resAvg);
 	pthread_join(thread2,(void**)&resLar);
-	printf("\nResult is:\nAverage: %d\nLargest: %d",(int)resAvg,(int)resLar);
+	printf("\nResult is:\nAverage: %d\nLargest: %d",*resAvg,*resLar);
 	return 0;
 }
