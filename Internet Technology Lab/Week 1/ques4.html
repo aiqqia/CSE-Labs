@@ -6,8 +6,8 @@
     <title>Question Four</title>
     <style>
         #container {
-            width: 20%;
-            height: 45vh;
+            width: 14%;
+            height: 35vh;
             border: 2px solid black;
             padding: 2rem;
             background-color: lightblue;
@@ -21,43 +21,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" language="javascript">
+    <script>
         $(document).ready(function () {
+            const pricesLaptop = { HP: 75000, Motorola: 30000, Samsung: 55000, Nokia: 11000, Apple: 100000 }
+            const pricesMobile = { HP: 2500, Motorola: 3000, Samsung: 25000, Nokia: 1000, Apple: 80000 }
             $("button").click(function () {
-                var bgco = $("#bgc").children("option:selected").val();
-                var font = $("#fo").children("option:selected").val();
-                var fsi = $("#fs").val();
-                var gr = $("#greeting").val();
-                var bds = $('input[type="radio"]:checked');
-                if (bds.length > 0) {
-                    var [b] = bds;
-                    var bdss = b.value;
+                let company = $("#items").children("option:selected").val()
+                let [laptop] = $("#Laptop:checked")
+                let [mobile] = $("#Mobile:checked")
+                let quantity = parseInt($("#qty").val())
+                let result = 0;
+                if (laptop) {
+                    result += quantity*pricesLaptop[company]
                 }
-                else {
-                    var bdss = "none";
+                if (mobile) {
+                    result += quantity * pricesMobile[company]
                 }
-                var imgc = $('input[type="checkbox"]:checked');
-                if (imgc.length == 0) {
-                    $("img").css("display", "none");
-                }
-                else {
-                    $("img").css("display", "inline-block");
-                }
-                $("#right").css("background-color", bgco);
-                $("#right").css("font-family", font);
-                $("#right").css("font-size", fsi + "px");
-                $("#right").css("border", "2px " + bdss + " black");
-                $("#greet").text(gr);
-
-
-                console.log(bgco, font, fsi, bds, bdss,gr);
+                alert(`You have purchased ${quantity} items and your total Bill Amount is : ${result}`);
             })
         })
     </script>
 </head>
     <body>
         <div id="container">
-            <label for="items">Choose a mobile brand:</label><br /><br />
+            <label for="items">Choose a brand:</label><br /><br />
             <select id="items" name="items">
                 <option value="HP" selected>HP</option>
                 <option value="Nokia">Nokia</option>
@@ -75,8 +62,7 @@
             <label for="qty">Enter quantity:</label><br /><br />
             <input id="qty" type="text" /><br /><br />
 
-            <button type="button">Produce Bill!</button><br /><br />
-            <p id="answerT">The Bill Produced is : <span id ="answer"></spanid> </p>
+            <button type="button">Produce Bill!</button>
         </div>
     </body>
 </html>
