@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question One</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        td{
+            padding: 1rem;
+        }
+        #container{
+        }
+        #wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#wrapper").css("justify-content", "flex-start");
+            })
+        })
+    </script>
+</head>
+<body>
+    <br />
+    <div id="container">
+        <div id="wrapper">
+            <table>
+                <tr>
+                    <td bgcolor="yellow">One</td>
+                    <td bgcolor="yellow">Two</td>
+                    <td bgcolor="yellow">Three</td>
+                </tr>
+                <tr>
+                    <td bgcolor="pink">Four</td>
+                    <td bgcolor="pink">Five</td>
+                    <td bgcolor="pink">Six</td>
+                </tr>
+                <tr>
+                    <td bgcolor="yellow">Seven</td>
+                    <td bgcolor="yellow">Eight</td>
+                    <td bgcolor="yellow">Nine</td>
+                </tr>
+            </table>
+            <br />
+            <img src="manipal.jpg" alt="college image" width="200" height="200">
+        </div>
+        <button type="button">Move right to left!</button>
+    </div>
+
+</body>
+</html>

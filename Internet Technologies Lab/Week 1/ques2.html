@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question Two</title>
+    <style>
+        #container {
+            border:groove;
+            width: 200px;
+            padding: 10px;
+        }
+        button {
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                var first = $("#fn").val();
+                var second = $("#sn").val();
+                var ans = 0;
+                var selected = $("#op").children("option:selected").val();
+                switch (selected) {
+                    case "plus":
+                        ans = parseInt(first) + parseInt(second);
+                        break;
+                    case "minus":
+                        ans = parseInt(first) - parseInt(second);
+                        break;
+                    case "multiply":
+                        ans = parseInt(first) * parseInt(second);
+                        break;
+                    case "divide":
+                        ans = parseInt(first) / parseInt(second);
+                        break;
+                    default:
+                        ans = -1;
+                        break;
+                }
+
+                $("#answer").text(ans);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <label for="fn">First number:</label><br />
+        <input type="text" id="fn"><br /><br />
+        <label for="sn">Second number:</label><br />
+        <input type="text" id="sn"><br /><br />
+        <label for="op">Choose an operation:</label><br /><br />
+        <select id="op" name="operations">
+            <option value="plus" selected>+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select><br />
+        <button type="button">Calculate!</button><br /><br />
+        <p id="answerT">The answer is : <span id ="answer"></spanid> </p>
+    </div>
+</body>
+</html>

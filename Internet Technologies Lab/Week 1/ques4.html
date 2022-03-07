@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Question Four</title>
+    <style>
+        #container {
+            width: 20%;
+            height: 45vh;
+            border: 2px solid black;
+            padding: 2rem;
+            background-color: lightblue;
+            margin-left: 40%;
+            margin-top: 10%;
+        }
+        button {
+            margin-top: 1rem;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                var bgco = $("#bgc").children("option:selected").val();
+                var font = $("#fo").children("option:selected").val();
+                var fsi = $("#fs").val();
+                var gr = $("#greeting").val();
+                var bds = $('input[type="radio"]:checked');
+                if (bds.length > 0) {
+                    var [b] = bds;
+                    var bdss = b.value;
+                }
+                else {
+                    var bdss = "none";
+                }
+                var imgc = $('input[type="checkbox"]:checked');
+                if (imgc.length == 0) {
+                    $("img").css("display", "none");
+                }
+                else {
+                    $("img").css("display", "inline-block");
+                }
+                $("#right").css("background-color", bgco);
+                $("#right").css("font-family", font);
+                $("#right").css("font-size", fsi + "px");
+                $("#right").css("border", "2px " + bdss + " black");
+                $("#greet").text(gr);
+
+
+                console.log(bgco, font, fsi, bds, bdss,gr);
+            })
+        })
+    </script>
+</head>
+    <body>
+        <div id="container">
+            <label for="items">Choose a mobile brand:</label><br /><br />
+            <select id="items" name="items">
+                <option value="HP" selected>HP</option>
+                <option value="Nokia">Nokia</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Apple">Motorola</option>
+            </select>
+            <br /><br />
+
+            <input type="checkbox" id="Mobile" name="Mobile" value="Mobile">
+            <label for="Mobile">Mobile</label><br /><br />
+            <input type="checkbox" id="Laptop" name="Laptop" value="Laptop">
+            <label for="Laptop">Laptop</label><br /><br />
+
+            <label for="qty">Enter quantity:</label><br /><br />
+            <input id="qty" type="text" /><br /><br />
+
+            <button type="button">Produce Bill!</button><br /><br />
+            <p id="answerT">The Bill Produced is : <span id ="answer"></spanid> </p>
+        </div>
+    </body>
+</html>
