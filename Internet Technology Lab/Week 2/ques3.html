@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  	<div class="container-fluid" >
+      <h1 style="text-align: center;">Employee Profile</h1>
+      <br><br><br>
+  		<div class="row" style="min-height: 400px;text-align:center;" >
+
+  			<button type="button" class="btn btn-default">Home <span class="badge badge-light">10</button>
+			  <button type="button" class="btn btn-primary">Tasks <span class="badge badge-light">5</button>
+			<button type="button" class="btn btn-success">Completion <span class="badge badge-light">8</button>
+			<button type="button" class="btn btn-info">Information <span class="badge badge-light">2</button>
+			<button type="button" class="btn btn-warning">Worktime</button>
+			<button type="button" class="btn btn-danger">Deadlines <span class="badge badge-light">15</button>
+			<button type="button" class="btn btn-link">Logout</button>
+      <br><br><br><br>
+      <h2>Employees under me:</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@yahoo.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@gmail.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@hotmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+  		</div>
+  		<div class = 'row' style="min-height: 400px" >
+  			<h1 style="text-align: center;">More Information</h1>
+  			<div class="col-sm-4">
+  				Change Region
+  				<div class="btn-group-vertical">
+  					<button type="button" class="btn btn-primary">USA</button>
+  					<button type="button" class="btn btn-primary">UK</button>
+  					<button type="button" class="btn btn-primary">Australia</button>
+				</div>
+  			</div>
+  			<div class="col-sm-4">
+  			<h2>	Login to a different Account : </h2>
+  				<form>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="text" type="text" class="form-control" name="User" placeholder="Please Enter your Username">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Please Enter your Password">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Text</span>
+    <input id="msg" type="text" class="form-control" name="msg" placeholder="Please Enter your Additional Info">
+  </div>
+</form>
+  			</div>
+  			<div class="col-sm-4">
+          <h3>Logged-in user</h3>
+  				<table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Raj</td>
+        <td>Nandyala</td>
+        <td>nan999@example.com</td>
+      </tr>
+
+    </tbody>
+  </table>
+  			</div>
+  		</div>
+  	</div>
+
+  </body>
+
+ </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <title>Employee CRUD Table</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h3>Employee Entries : </h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employee Name</th>
+          <th>Employee salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            Larry David
+          </td>
+          <td>$75000</td>
+        </tr>
+        <tr>
+          <td>
+            2
+          </td>
+          <td>
+            Jimmy Kimmel
+          </td>
+          <td>$60000</td>
+        </tr>
+        <tr>
+          <td>
+            3
+          </td>
+          <td>
+            Antonio Banderas
+          </td>
+          <td>$90000</td>>
+        </tr>
+        <tr>
+          <td>
+            4
+          </td>
+          <td>
+            Jon Hamm
+          </td>
+          <td>$80000</td>>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <legend>Create New Employee : </legend>
+      <div class="form-group">
+        <label for="name">Employee Id</label>
+        <input type="number" class="form-control" id="name" placeholder="Enter employee id" />
+      </div>
+      <div class="form-group">
+        <label for="name">Employee Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter employee name" />
+      </div>
+      <div class="form-group">
+        <label for="name">Employee Salary</label>
+        <input type="number" class="form-control" id="name" placeholder="Enter employee salary" />
+      </div>
+      <button type="submit" class="btn btn-success">CREATE</button>
+    </form>
+    <hr>
+    <form>
+      <legend>Update the Employee : </legend>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Seect the Employee to update : </label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Employee New Id</label>
+        <input type="number" class="form-control" id="name" placeholder="Enter employee id" />
+      </div>
+      <div class="form-group">
+        <label for="name">Employee New Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter employee name" />
+      </div>
+      <div class="form-group">
+        <label for="name">Employee New Salary</label>
+        <input type="number" class="form-control" id="name" placeholder="Enter employee salary" />
+      </div>
+      <button type="submit" class="btn btn-info">UPDATE</button>
+    </form>
+    <hr>
+    <form>
+      <legend>Delete the Employee : </legend>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Select the Employee to delete : </label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-danger">DELETE</button>
+    </form>
+
+
+  </div>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

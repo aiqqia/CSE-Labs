@@ -1,0 +1,88 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Student Bio Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h3> Student Bio-Data </h3>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="inputName1">Please Enter your Name:</label>
+                <input type="name" class="form-control" id="inputName1" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <label for="inputRegNo1">Please Enter your Registration Number: </label>
+                <input type="number" class="form-control" id="inputRegNo1" placeholder="Enter Registration No">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="confirmDetails">
+                <label class="form-check-label" for="confirmDetails">Please tick the check box to Confirm your
+                    Details</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br>
+        <br>
+        <p class="font-weight-bold">Choices for choosing an Open-Elective :</p>
+        <br>
+        <br>
+        <div class="table-responsive col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Field of Study</th>
+                        <th>Open-Elective</th>
+                        <th>Are you choosing this Open-Elective ?</th>
+                    </tr>
+                    <tr>
+                        <td>Finance</td>
+                        <td>Corporate Accounting</td>
+                        <td>
+                            <input type="radio" name="radios1" id="radio1" />
+                            <label for="radio1">Yes</label>
+                            <input type="radio" name="radios1" id="radio2" />
+                            <label for="radio2">No</label>
+                            <input type="radio" name="radios1" id="radio3" />
+                            <label for="radio3">Maybe</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>Big Data Analytics</td>
+                        <td>
+                            <input type="radio" name="radios2" id="radio1" />
+                            <label for="radio1">Yes</label>
+                            <input type="radio" name="radios2" id="radio2" />
+                            <label for="radio2">No</label>
+                            <input type="radio" name="radios2" id="radio3" />
+                            <label for="radio3">Maybe</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Medical Science</td>
+                        <td>Neurology</td>
+                        <td>
+                            <input type="radio" name="radios3" id="radio1" />
+                            <label for="radio1">Yes</label>
+                            <input type="radio" name="radios3" id="radio2" />
+                            <label for="radio2">No</label>
+                            <input type="radio" name="radios3" id="radio3" />
+                            <label for="radio3">Maybe</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
