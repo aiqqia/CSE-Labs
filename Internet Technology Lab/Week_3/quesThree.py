@@ -18,7 +18,7 @@ def binary_search(arr, low, high, x):
 
 # Test array
 arr = [ 2, 3, 4, 10, 40 ]
-x = 4
+x = int(input('Enter number to be searched: '))
 
 # Function call
 result = binary_search(arr, 0, len(arr)-1, x)
