@@ -1,4 +1,4 @@
-# CSE_Labs 2019-2023
+# CSE-Labs 2019-2023
 This is a repository which contains all Lab Manuals, Code required, Sample Input/Output and documentation of the written code. These labs were conducted during my B.Tech in CSE (2019-2023)
 
 ## 3rd Semester :
@@ -11,6 +11,9 @@ Programming in Java utilizing Object Oriented Programming concepts.
 
 ### Digital System Design Lab (DSD):
 Programming for logic design using Verilog.
+
+### Open Source Technology Lab (OSTL):
+Use of git, shell scripting, debugging, and basics of HTML, CSS and Javascript.
 
 ## 4th Semester :
 
