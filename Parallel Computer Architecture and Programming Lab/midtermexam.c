@@ -50,13 +50,14 @@ int main(int argc, char* argv[]){
     else{
         ran[0] = rand;
         for(int i=1;i<size;i++){
-            MPI_Recv(&r, 1 , MPI_INT, rank, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            ran[rank] = r;
+            MPI_Recv(&r, 1 , MPI_INT, i, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            ran[i] = r;
         }
         printf("Random numbers are: ");
         for(int i=0;i<size;i++){
             printf("%d ", ran[i]);
         }
+        printf("\n");
     }
 
 
