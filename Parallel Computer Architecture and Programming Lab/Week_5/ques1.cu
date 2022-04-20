@@ -57,7 +57,7 @@ void vecAdd(float *a,float *b,float *c,int n){
 	}
 	printf("\n\n");	
 
-	vecAddKernel_1c<<<((n+255)/256),256>>> (d_a,d_b,d_c);
+	vecAddKernel_1c<<<((n+255)/256),256>>> (d_a,d_b,d_c,n);
 	cudaMemcpy(c,d_c,size,cudaMemcpyDeviceToHost);
 	printf("a + b(from kernel 1c):");
 	for(int i = 0;i<n;i++){

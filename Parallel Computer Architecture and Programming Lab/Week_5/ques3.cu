@@ -3,11 +3,11 @@
 #include<stdio.h>
 
 __global__
-void oddEven(float *arr,int n){
+void oddEven(int *arr,int n){
 	int idx = threadIdx.x + blockIdx.x*blockDim.x;
 	if(idx%2 == 1 && idx + 1 < n){
 		if(arr[idx] > arr[idx+1]){
-			float temp = arr[idx];
+			int temp = arr[idx];
 			arr[idx] = arr[idx+1];
 			arr[idx+1] = temp;
 		}
@@ -15,21 +15,21 @@ void oddEven(float *arr,int n){
 }
 
 __global__
-void evenOdd(float* arr,int n){
+void evenOdd(int* arr,int n){
 	int idx = threadIdx.x + blockIdx.x*blockDim.x;
 
 	if(idx%2 == 0 && idx + 1 < n){
 		if(arr[idx] > arr[idx+1]){
-			float temp = arr[idx];
+			int temp = arr[idx];
 			arr[idx] = arr[idx+1];
 			arr[idx+1] = temp;
 		}
 	}
 }
 
-void oddEvenTranspositionSort(float *arr,int n){
-	int size= n * sizeof(float);
-	float *d_arr;
+void oddEvenTranspositionSort(int *arr,int n){
+	int size= n * sizeof(int);
+	int *d_arr;
 	cudaMalloc((void**)&d_arr,size);
 	cudaMemcpy(d_arr,arr,size,cudaMemcpyHostToDevice);
 	for(int i = 0;i<=n/2;i++){
@@ -41,33 +41,26 @@ void oddEvenTranspositionSort(float *arr,int n){
 }
 
 int main(){
-	float *h_arr;
-	int n = 5;
-	int size = n * sizeof(float);
-	h_arr = (float*)malloc(size);
-	for(int i = 0 ;i < 5;i++){
-		h_arr[i] = rand()%50;
+	int *h_arr;
+	int n;
+    printf("Enter size(N): ");
+    scanf("%d", &n);
+	int size = n * sizeof(int);
+	h_arr = (int*)malloc(size);
+    printf("Enter %d elements in unsorted array: ", n);
+	for(int i = 0 ;i < n;i++){
+		scanf("%d",&h_arr[i]);
 	}
-	printf("unsorted arr:");
-	for(int i = 0 ;i < 5;i++){
-		printf("%f,",h_arr[i]);
+	printf("Unsorted Arr:");
+	for(int i = 0 ;i < n;i++){
+		printf("%d ",h_arr[i]);
 	}
 	printf("\n\n");
 	oddEvenTranspositionSort(h_arr,n);
-	printf("sorted arr:\n");
-	for(int i = 0 ;i < 5;i++){
-		printf("%f,",h_arr[i]);
+	printf("Sorted Arr: ");
+	for(int i = 0 ;i < n;i++){
+		printf("%d ",h_arr[i]);
 	}
 	printf("\n");
 	return 0;
 }
-
-/*
-to send file to remote server
-scp filename.cu D-190905522@172.16.57.152:/home/username
-password:D-190905522
-remote login
-ssh D-190905522@172.16.57.152
-nvcc filename.cu
-./a.out
-*/
