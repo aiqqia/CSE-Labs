@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+// 3. Write a execute a CUDA program to read an integer array of size N. Sort this array using odd-even transposition sorting. Use 2 kernels.
+
 __global__
 void oddEven(int *arr,int n){
 	int idx = threadIdx.x + blockIdx.x*blockDim.x;

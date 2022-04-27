@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// 1. Write and execute a program in CUDA to add two vectors of length N to meet the following requirements using 3 different kernels 
+
+// a) block size as N 
+
+// b) N threads within a block
+
+// c) Keep the number of threads per block as 256 (constant) and vary the number of blocks to handle N elements.
+
 __global__
 void vecAddKernel_1a(float *a,float *b,float *c){
 	int idx = threadIdx.x + blockIdx.x*blockDim.x;

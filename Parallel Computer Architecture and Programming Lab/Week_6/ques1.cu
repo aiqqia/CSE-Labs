@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <cuda.h>
 
+// Write a program in CUDA to multiply two Matrices for the following specifications:  
+	 
+// 	a. Each row of resultant matrix to be computed by one thread.  
+	 
+// 	b. Each column of resultant matrix to be computed by one thread.  
+	 
+// 	c. Each element of resultant matrix to be computed by one thread. 
+
+// 	d. Perform matrix multiplication using 2D Grid and 2D Block. 
+
 __host__ __device__ void printMatrix(const char* string, int* A, int width){
 	printf("%s\n", string);
 	for (int i = 0; i < width; i++){

@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// 2. Write and execute a CUDA program to read an array of N integer values. Sort the array in parallel using parallel selection sort and store the result in another array.
+
 __global__
 void selectionSortKernel(int* unsorted,int *sorted,int n){
 	int idx = threadIdx.x + blockIdx.x*blockDim.x;
