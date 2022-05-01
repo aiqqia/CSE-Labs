@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <form action="." method="POST">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" />
+    </form>
+    <a href="/">Go to Home!</a>
+</body>
+</html>
