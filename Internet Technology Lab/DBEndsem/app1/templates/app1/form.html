@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    {% if question %}
+    <form action="." method="POST">
+        {% csrf_token %}
+        {{ question }}
+        {% for option in options %}
+        <label>{{ option.value }}</label>
+        <input type="radio" value="{{ option.value }}" name="question" />
+        {% endfor %}
+        <input type="submit" />
+    </form>
+    {% else %}
+    {% for option in options %}
+    {{ option.value }} : {{ option.number }}
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

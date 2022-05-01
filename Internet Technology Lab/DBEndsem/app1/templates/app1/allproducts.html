@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    {% for product in products %}
+    {{ product.title }}   {{ product.body }}    {{ product.price }}     {{ product.timestamp }}   {{ product.id }}
+    <br />
+    {% endfor %}
+    <br />
+    <a href="/">Go back to home!</a>
+
+</body>
+</html>
