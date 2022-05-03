@@ -96,7 +96,7 @@ void oneDConvolute(int* h_A, int* h_M, int* h_P, int width, int mwidth){
     elapsedTime = 0;
     cudaEventElapsedTime(&elapsedTime, start, stop);
     cudaMemcpy(h_P, d_P, size, cudaMemcpyDeviceToHost);
-    printf("The Convulated Array(Constant Memory) is : ");
+    printf("The Convulated Array(Shared Memory) is : ");
     for(int i=0;i<width;i++){
         printf("%d ",h_P[i]);
     }
